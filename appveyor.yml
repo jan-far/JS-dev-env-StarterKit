@@ -1,6 +1,6 @@
 # Test against version of nodejs
 environment:
-  # matrix:
+  matrix:
   # node.js
   - nodejs_version: "stable"
 

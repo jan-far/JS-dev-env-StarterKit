@@ -1,0 +1,9 @@
+body {
+    font-family: Sans-Serif;
+    display: flex;
+    flex-direction: column;
+}
+
+h1{
+    align-self: center
+}

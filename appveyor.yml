@@ -1,8 +1,8 @@
 # Test against version of nodejs
 environment:
   matrix:
-#node.js
--nodejs_version: "stable"
+  #node.js
+  -nodejs_version: "stable"
 
 #install script. (run after the repo cloning)
 install:

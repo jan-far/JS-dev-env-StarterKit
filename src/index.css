@@ -7,3 +7,7 @@ body {
 h1{
     align-self: center
 }
+
+table th{
+  padding: 5px;
+}

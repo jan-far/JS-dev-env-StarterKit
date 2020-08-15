@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "prestart": "babel-node buildScript/startMessage.js ",
-    "start": "npm-run-all --parallel open:src lint:watch test:watch start-mockapi" ,
+    "start": "npm-run-all --parallel open:src lint:watch test:watch start-mockapi",
     "open:src": "babel-node buildScript/srcServer.js",
     "lint": "esw webpack.config.* src buildScript --color",
     "lint:watch": "npm run lint -- --watch",
@@ -15,7 +15,11 @@
     "test:watch": "npm run test -- --watch",
     "generate-mock-data": "babel-node buildScript/generateMockData",
     "prestart-mockapi": "npm run generate-mock-data",
-    "start-mockapi": "json-server --watch src/api/db.json --port 3001"
+    "start-mockapi": "json-server --watch src/api/db.json --port 3001",
+    "clean-dist": "rimraf ./dist && mkdir dist",
+    "prebuild": "npm-run-all clean-dist test lint",
+    "build": "babel-node buildScript/build.js",
+    "postbuild": "babel-node buildScript/distServer.js"
   },
   "repository": {
     "type": "git",
@@ -63,6 +67,7 @@
     "rimraf": "3.0.2",
     "style-loader": "1.2.1",
     "surge": "0.21.6",
+    "uglifyjs-webpack-plugin": "^2.2.0",
     "webpack": "4.44.1",
     "webpack-dev-middleware": "3.7.2",
     "webpack-hot-middleware": "2.25.0",

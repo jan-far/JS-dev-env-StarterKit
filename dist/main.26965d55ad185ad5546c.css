@@ -1,0 +1,15 @@
+body {
+    font-family: Sans-Serif;
+    display: flex;
+    flex-direction: column;
+}
+
+h1{
+    align-self: center
+}
+
+table th{
+  padding: 5px;
+}
+
+/*# sourceMappingURL=main.26965d55ad185ad5546c.css.map*/
